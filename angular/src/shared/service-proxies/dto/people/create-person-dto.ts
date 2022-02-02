@@ -28,6 +28,7 @@ export class CreatePersonDto implements ICreatePersonDto {
             this.name = data.name;
             this.documentType = data.documentType;
             this.document = data.document;
+            this.isActive = data.isActive;
         }
     }
 
@@ -45,6 +46,7 @@ export class CreatePersonDto implements ICreatePersonDto {
         data.name = this.name;
         data.documentType = this.documentType;
         data.document = this.document;
+        data.isActive = this.isActive;
 
         return data;
     }
