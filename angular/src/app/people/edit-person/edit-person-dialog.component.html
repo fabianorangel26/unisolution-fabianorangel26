@@ -1,0 +1,115 @@
+<form
+  class="form-horizontal"
+  autocomplete="off"
+  #editPersonForm="ngForm"
+  (ngSubmit)="save()"
+>
+  <abp-modal-header
+    [title]="'EditPerson' | localize"
+    (onCloseClick)="bsModalRef.hide()"
+  ></abp-modal-header>
+  <div class="modal-body">
+    <div class="form-group row required">
+      <label class="col-md-3 col-form-label" for="personName">
+        {{ "Name" | localize }}
+      </label>
+
+      <div class="col-md-9">
+        <input
+          type="text"
+          class="form-control"
+          name="personName"
+          id="personName"
+          minlength="2"
+          maxlength="128"
+          required
+          [(ngModel)]="person.name"
+          #personDescriptionModel="ngModel"
+          #personDescriptionEl
+        />
+        <abp-validation-summary
+          [control]="personDescriptionModel"
+          [controlEl]="personDescriptionEl"
+        ></abp-validation-summary>
+      </div>
+    </div>
+
+    <div class="form-group row required">
+      <label class="col-md-3 col-form-label" for="documentType">
+        {{ "DocumentType" | localize }}
+      </label>
+      <div class="col-md-9">
+        <select
+          name="documentType"
+          type="text"
+          class="form-control"
+          id="documentType"
+          maxlength="256"
+          required
+          [(ngModel)]="person.documentType"
+          #documentTypeModel="ngModel"
+          #documentTypeEl
+        >
+          <option
+            [value]="documentType.id"
+            *ngFor="let documentType of documentTypes"
+          >
+            {{ documentType.name }}
+          </option>
+        </select>
+        <abp-validation-summary
+          [control]="documentTypeModel"
+          [controlEl]="documentTypeEl"
+        ></abp-validation-summary>
+      </div>
+    </div>
+
+    <div class="form-group row required">
+      <label class="col-md-3 col-form-label" for="document">
+        {{ "Document" | localize }}
+      </label>
+
+      <div class="col-md-9">
+        <input
+          type="text"
+          class="form-control"
+          name="document"
+          id="document"
+          minlength="2"
+          maxlength="256"
+          required
+          [(ngModel)]="person.document"
+          #documentTypeModel="ngModel"
+          #documentTypeEl
+        />
+        <abp-validation-summary
+          [control]="documentTypeModel"
+          [controlEl]="documentTypeEl"
+        ></abp-validation-summary>
+      </div>
+    </div>
+    <div class="form-group row mb-0">
+      <label class="col-md-3 col-form-label">
+        {{ "IsActive" | localize }}
+      </label>
+      <div class="col-md-9">
+        <div class="custom-control custom-checkbox">
+          <input
+            type="checkbox"
+            class="custom-control-input"
+            name="isActive"
+            id="isActive"
+            [(ngModel)]="person.isActive"
+          />
+          <label class="custom-control-label mt-2" for="isActive"></label>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <abp-modal-footer
+    [cancelDisabled]="saving"
+    [saveDisabled]="!editPersonForm.form.valid || saving"
+    (onCancelClick)="bsModalRef.hide()"
+  ></abp-modal-footer>
+</form>
