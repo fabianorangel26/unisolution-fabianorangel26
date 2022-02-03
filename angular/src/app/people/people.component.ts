@@ -82,9 +82,9 @@ export class PeopleComponent extends PagedListingComponentBase<PersonDto> {
     this.showCreateOrEditPersonDialog(person.id);
   }
 
-  showCreateOrEditPersonDialog(id?: string): void {
+  showCreateOrEditPersonDialog(id?: number): void {
     let createOrEditPersonDialog: BsModalRef;
-    if (!id || id === '') {
+    if (!id) {
       createOrEditPersonDialog = this._modalService.show(
         CreatePersonDialogComponent,
         {
@@ -128,4 +128,3 @@ export class PeopleComponent extends PagedListingComponentBase<PersonDto> {
     );
   }
 }
-

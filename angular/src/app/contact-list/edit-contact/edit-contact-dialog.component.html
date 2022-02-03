@@ -1,0 +1,111 @@
+<form
+  class="form-horizontal"
+  autocomplete="off"
+  #editContactForm="ngForm"
+  (ngSubmit)="save()"
+>
+  <abp-modal-header
+    [title]="'EditContact' | localize"
+    (onCloseClick)="bsModalRef.hide()"
+  ></abp-modal-header>
+  <div class="modal-body">
+    <div class="form-group row required">
+      <label class="col-md-3 col-form-label" for="contactName">
+        {{ "Name" | localize }}
+      </label>
+
+      <div class="col-md-9">
+        <input
+          type="text"
+          class="form-control"
+          name="contactName"
+          id="contactName"
+          minlength="2"
+          maxlength="128"
+          required
+          [(ngModel)]="contact.name"
+          #contactDescriptionModel="ngModel"
+          #contactDescriptionEl
+        />
+        <abp-validation-summary
+          [control]="contactDescriptionModel"
+          [controlEl]="contactDescriptionEl"
+        ></abp-validation-summary>
+      </div>
+    </div>
+
+    <div class="form-group row required">
+      <label class="col-md-3 col-form-label" for="telephone">
+        {{ "Telephone" | localize }}
+      </label>
+
+      <div class="col-md-9">
+        <input
+          type="text"
+          class="form-control"
+          name="telephone"
+          id="telephone"
+          minlength="2"
+          maxlength="256"
+          required
+          [(ngModel)]="contact.telephone"
+          #telephoneModel="ngModel"
+          #telephoneEl
+        />
+        <abp-validation-summary
+          [control]="telephoneModel"
+          [controlEl]="telephoneEl"
+        ></abp-validation-summary>
+      </div>
+    </div>
+
+    <div class="form-group row required">
+        <label class="col-md-3 col-form-label" for="email">
+          {{ "Email" | localize }}
+        </label>
+
+        <div class="col-md-9">
+          <input
+            type="email"
+            class="form-control"
+            name="email"
+            id="email"
+            minlength="2"
+            maxlength="256"
+            required
+            [(ngModel)]="contact.email"
+            #emailModel="ngModel"
+            #emailEl
+          />
+          <abp-validation-summary
+            [control]="emailModel"
+            [controlEl]="emailEl"
+          ></abp-validation-summary>
+        </div>
+      </div>
+
+    <div class="form-group row mb-0">
+      <label class="col-md-3 col-form-label">
+        {{ "IsActive" | localize }}
+      </label>
+      <div class="col-md-9">
+        <div class="custom-control custom-checkbox">
+          <input
+            type="checkbox"
+            class="custom-control-input"
+            name="isActive"
+            id="isActive"
+            [(ngModel)]="contact.isActive"
+          />
+          <label class="custom-control-label mt-2" for="isActive"></label>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <abp-modal-footer
+    [cancelDisabled]="saving"
+    [saveDisabled]="!editContactForm.form.valid || saving"
+    (onCancelClick)="bsModalRef.hide()"
+  ></abp-modal-footer>
+</form>

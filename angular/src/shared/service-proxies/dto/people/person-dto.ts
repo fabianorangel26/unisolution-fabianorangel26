@@ -1,5 +1,5 @@
 export interface IPersonDto {
-    id: string;
+    id: number;
     name: string;
     documentType: string;
     document: string;
@@ -7,7 +7,7 @@ export interface IPersonDto {
 }
 
 export class PersonDto implements IPersonDto {
-    id: string;
+    id: number;
     name: string;
     documentType: string;
     document: string;

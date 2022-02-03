@@ -4,14 +4,12 @@ import {
   OnInit,
   Output,
   EventEmitter,
-  NgModule,
 } from "@angular/core";
 import { finalize } from "rxjs/operators";
 import { BsModalRef } from "ngx-bootstrap/modal";
 import { AppComponentBase } from "@shared/app-component-base";
 import { CreatePersonDto } from "@shared/service-proxies/dto/people/create-person-dto";
 import { PersonServiceProxy } from "@shared/service-proxies/service-proxies";
-import { NgxMaskModule } from "ngx-mask";
 
 @Component({
   selector: "app-create-person-dialog",
@@ -22,9 +20,6 @@ export class CreatePersonDialogComponent
   extends AppComponentBase
   implements OnInit
 {
-  @NgModule({
-    imports: [NgxMaskModule.forRoot()],
-  })
   saving = false;
   person: CreatePersonDto = new CreatePersonDto();
   documentTypes = [{ id: 1, name: "CPF" }, { id: 2, name: "RG" }, { id: 3, name: "CNH" }];

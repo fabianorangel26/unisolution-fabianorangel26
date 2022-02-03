@@ -1034,6 +1034,54 @@ namespace UniSolution.FabianoRangel26.Migrations
                     b.ToTable("AbpUsers");
                 });
 
+            modelBuilder.Entity("UniSolution.FabianoRangel26.ContactList.Contact", b =>
+                {
+                    b.Property<long>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnName("ID")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<DateTime>("CreationTime");
+
+                    b.Property<long?>("CreatorUserId");
+
+                    b.Property<long?>("DeleterUserId");
+
+                    b.Property<DateTime?>("DeletionTime");
+
+                    b.Property<string>("Email")
+                        .IsRequired()
+                        .HasColumnName("Email")
+                        .HasMaxLength(512);
+
+                    b.Property<bool>("IsActive");
+
+                    b.Property<bool>("IsDeleted");
+
+                    b.Property<DateTime?>("LastModificationTime");
+
+                    b.Property<long?>("LastModifierUserId");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnName("Contato")
+                        .HasMaxLength(128);
+
+                    b.Property<long>("PersonId")
+                        .HasColumnName("PessoaID");
+
+                    b.Property<string>("Telephone")
+                        .IsRequired()
+                        .HasColumnName("Telefone")
+                        .HasMaxLength(32);
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("PersonId");
+
+                    b.ToTable("ListaContatos");
+                });
+
             modelBuilder.Entity("UniSolution.FabianoRangel26.MultiTenancy.Tenant", b =>
                 {
                     b.Property<int>("Id")
@@ -1273,6 +1321,14 @@ namespace UniSolution.FabianoRangel26.Migrations
                     b.HasOne("UniSolution.FabianoRangel26.Authorization.Users.User", "LastModifierUser")
                         .WithMany()
                         .HasForeignKey("LastModifierUserId");
+                });
+
+            modelBuilder.Entity("UniSolution.FabianoRangel26.ContactList.Contact", b =>
+                {
+                    b.HasOne("UniSolution.FabianoRangel26.People.Person", "Person")
+                        .WithMany()
+                        .HasForeignKey("PersonId")
+                        .OnDelete(DeleteBehavior.Cascade);
                 });
 
             modelBuilder.Entity("UniSolution.FabianoRangel26.MultiTenancy.Tenant", b =>

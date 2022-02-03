@@ -41,6 +41,9 @@ import { SidebarMenuComponent } from './layout/sidebar-menu.component';
 import { PeopleComponent } from './people/people.component';
 import { CreatePersonDialogComponent } from './people/create-person/create-person-dialog.component';
 import { EditPersonDialogComponent } from './people/edit-person/edit-person-dialog.component';
+import { ContactListComponent } from './Contact-List/contact-list.component';
+import { CreateContactDialogComponent } from './Contact-List/create-contact/create-contact-dialog.component';
+import { EditContactDialogComponent } from './Contact-List/edit-contact/edit-contact-dialog.component';
 
 @NgModule({
   declarations: [
@@ -74,7 +77,11 @@ import { EditPersonDialogComponent } from './people/edit-person/edit-person-dial
     // People
     PeopleComponent,
     CreatePersonDialogComponent,
-    EditPersonDialogComponent
+    EditPersonDialogComponent,
+    // Contact List
+    ContactListComponent,
+    CreateContactDialogComponent,
+    EditContactDialogComponent
   ],
   imports: [
     CommonModule,
