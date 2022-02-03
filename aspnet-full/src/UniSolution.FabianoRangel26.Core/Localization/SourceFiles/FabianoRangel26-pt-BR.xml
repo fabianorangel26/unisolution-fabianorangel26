@@ -113,6 +113,10 @@
 		<text name="EditPerson">Editar pessoa</text>
 		<text name="Telephone">Telefone</text>
 		<text name="Email">E-mail</text>
-		<text name="PersonDeleteWarningMessage">A pessoa {0} será excluída.</text>
+		<text name="PersonDeleteWarningMessage">A pessoa será excluída!</text>
+		<text name="ContactList">Lista de contatos</text>
+		<text name="CreateNewContact">Criar novo contato</text>
+		<text name="EditContact">Editar contatos</text>
+		<text name="ContactDeleteWarningMessage">O contato será excluído!</text>
 	</texts>
 </localizationDictionary>

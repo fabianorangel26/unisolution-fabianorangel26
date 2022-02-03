@@ -12,6 +12,7 @@ namespace UniSolution.FabianoRangel26.Authorization
             context.CreatePermission(PermissionNames.Pages_Users_Activation, L("UsersActivation"));
             context.CreatePermission(PermissionNames.Pages_Roles, L("Roles"));
             context.CreatePermission(PermissionNames.Pages_People, L("People"));
+            context.CreatePermission(PermissionNames.Pages_ContactList, L("ContactList"));
             context.CreatePermission(PermissionNames.Pages_Tenants, L("Tenants"), multiTenancySides: MultiTenancySides.Host);
         }
 

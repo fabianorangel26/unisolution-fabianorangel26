@@ -23,6 +23,7 @@ export class CreateContactDialogComponent extends AppComponentBase implements On
   contact: CreateContactDto = new CreateContactDto();
   contacts: PersonDto[] = [];
   personSelected: number;
+  telephoneMask = ['+', '5', '5', ' ', '(', /\d/, /\d/, ')', ' ', /\d/, /\d/, /\d/, /\d/, '-', /\d/, /\d/, /\d/, /\d/];
 
   @Output() onSave = new EventEmitter<any>();
 

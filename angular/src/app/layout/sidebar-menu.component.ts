@@ -58,7 +58,7 @@ export class SidebarMenuComponent extends AppComponentBase implements OnInit {
                 'Pages.People'
               ),
               new MenuItem(
-                this.l('ContacList'),
+                this.l('ContactList'),
                 '/app/contact-list',
                 'fas fa-address-book',
                 'Pages.ContactList'

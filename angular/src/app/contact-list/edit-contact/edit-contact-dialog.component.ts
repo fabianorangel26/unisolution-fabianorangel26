@@ -14,6 +14,7 @@ export class EditContactDialogComponent extends AppComponentBase implements OnIn
   saving = false;
   contact: ContactDto = new ContactDto();
   id: string;
+  telephoneMask = ['+', '5', '5', ' ', '(', /\d/, /\d/, ')', ' ', /\d/, /\d/, /\d/, /\d/, '-', /\d/, /\d/, /\d/, /\d/];
 
   @Output() onSave = new EventEmitter<any>();
 

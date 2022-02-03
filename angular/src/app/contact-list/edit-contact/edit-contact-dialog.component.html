@@ -47,6 +47,7 @@
           id="telephone"
           minlength="2"
           maxlength="256"
+          [textMask]="{mask: telephoneMask}"
           required
           [(ngModel)]="contact.telephone"
           #telephoneModel="ngModel"
@@ -70,8 +71,8 @@
             class="form-control"
             name="email"
             id="email"
-            minlength="2"
             maxlength="256"
+            pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{1,})+$"
             required
             [(ngModel)]="contact.email"
             #emailModel="ngModel"

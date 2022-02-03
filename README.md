@@ -18,35 +18,51 @@
 <br>
 
 <p align="center">
-  <img alt="Happy" src=".github/happy.png" width="100%">
+  <img alt="Desafio" src=".github/desafio.png" width="100%">
 </p>
 
 ## 🚀 Tecnologias
 
 Esse projeto foi desenvolvido com as seguintes tecnologias:
 
-- [Node.js](https://nodejs.org/en/)
-- [React](https://reactjs.org)
-- [React Native](https://facebook.github.io/react-native/)
-- [Expo](https://expo.io/)
+- [.Net Framework 4.6.1](https://visualstudio.microsoft.com/pt-br/thank-you-downloading-visual-studio/)
+- [C#](https://docs.microsoft.com/pt-br/dotnet/csharp/)
+- [Angular](https://angular.io/)
+- [ABP](https://aspnetboilerplate.com/Pages/Documents/v5.14/)
 - [TypeScript](https://www.typescriptlang.org/)
 
 ## 💻 Projeto
 
-O Happy é uma aplicação que conecta pessoas à casas de acolhimento institucional para fazer o dia de muitas crianças mais feliz 💜
+O desafio é uma aplicação que cadastra pessoas e contatos dessas pessoas.
+
+## Criação do banco de dados
+
+Faça o download do projeto.  
+Abra a solução contida na pasta "aspnet-full" no Visual Studio.  
+Altere a string de conexão do banco de dados no arquivo appsettings.json, que se encontra dentro do projeto "UniSolution.FabianoRangel26.Web.Host".  
+Para gerar o banco de dados do projeto, acesse o Package Manager Console e execute os seguintes comandos:  
+	1. Selecione o Default project "src\UniSolution.FabianoRangel26.EntityFrameworkCore"  
+	2. Digite o comando "Update-Database" (sem as aspas)  
+	
+Após o banco de dados ser gerado, execute o projeto.  
+
+
+## Informações de login
+
+Usuário: admin  
+Senha: 123qwe
 
 ## 🔖 Layout
 
 Nos links abaixo você encontra o layout do projeto web e também do mobile. Lembrando que você precisa ter uma conta no [Figma](http://figma.com/) para acessá-lo.
 
-- [Layout Web](https://www.figma.com/file/mDEbnoojksG4w8sOxmudh3/Happy-Web)
-- [Layout Mobile](https://www.figma.com/file/X27FfVxAgy9f5IFa7ONlph/Happy-Mobile)
+- [Layout](https://www.figma.com/file/YuRVOtzvITeZeHZEzhKuYL/UniSolution%2FFabianoRangel26?node-id=49828%3A152)
 
 ## 🧠 Desafio
 
-No link a seguir você encontra o guia no Notion referente aos desafios propostos para que você possa percorrer a milha extra e incrementar ainda mais essa aplicação. Lá também você encontra um guia mostrando todo o passo a passo de como realizar o deploy tanto do backend quanto do frontend.
+No link a seguir você encontra o desafio proposto para que você possa entender e incrementar ainda mais essa aplicação.
 
-- [Desafio Happy 2.0](https://www.notion.so/Vers-o-2-0-do-Happy-c754db7a4d41469e8c2d00fcf75392c4)
+- [Desafio Unisolution](https://ruddy-biology-d93.notion.site/Escopo-do-Desafio-0fa43182ba504cf097ca7ca13d61d6fd)
 
 ## :memo: Licença
 
@@ -54,7 +70,7 @@ Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE.md) para
 
 ---
 
-Feito com ♥ by Rocketseat :wave: [Participe da nossa comunidade!](https://discordapp.com/invite/gCRAFhc)
+Feito com ♥ by FabianoRangel26 :wave: [Participe da nossa comunidade!](https://discord.gg/swaQNf9)
 
 # Important
 

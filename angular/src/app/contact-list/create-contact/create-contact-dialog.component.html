@@ -47,10 +47,12 @@
       </label>
       <div class="col-md-9">
         <input
-          type="number"
+          type="text"
           class="form-control"
           name="telephone"
           id="telephone"
+          maxlength="256"
+          [textMask]="{mask: telephoneMask}"
           required
           [(ngModel)]="contact.telephone"
           #telephoneModel="ngModel"
@@ -74,6 +76,8 @@
           name="email"
           id="email"
           required
+          maxlength="256"
+          pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{1,})+$"
           [(ngModel)]="contact.email"
           #emailModel="ngModel"
           #emailEl

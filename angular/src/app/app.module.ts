@@ -44,6 +44,7 @@ import { EditPersonDialogComponent } from './people/edit-person/edit-person-dial
 import { ContactListComponent } from './Contact-List/contact-list.component';
 import { CreateContactDialogComponent } from './Contact-List/create-contact/create-contact-dialog.component';
 import { EditContactDialogComponent } from './Contact-List/edit-contact/edit-contact-dialog.component';
+import { TextMaskModule } from 'angular2-text-mask';
 
 @NgModule({
   declarations: [
@@ -93,6 +94,7 @@ import { EditContactDialogComponent } from './Contact-List/edit-contact/edit-con
     BsDropdownModule,
     CollapseModule,
     TabsModule,
+    TextMaskModule,
     AppRoutingModule,
     ServiceProxyModule,
     SharedModule,
