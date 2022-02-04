@@ -62,7 +62,7 @@ Nos links abaixo você encontra o layout do projeto web e também do mobile. Lem
 
 No link a seguir você encontra o desafio proposto para que você possa entender e incrementar ainda mais essa aplicação.
 
-- [Desafio Unisolution](https://ruddy-biology-d93.notion.site/Escopo-do-Desafio-0fa43182ba504cf097ca7ca13d61d6fd)
+- [Desafio UniSolution](https://ruddy-biology-d93.notion.site/Escopo-do-Desafio-0fa43182ba504cf097ca7ca13d61d6fd)
 
 ## :memo: Licença
 
@@ -92,14 +92,14 @@ Create & download your project from https://aspnetboilerplate.com/Templates
 # Screenshots
 
 #### Sample Dashboard Page
-![](_screenshots/module-zero-core-template-ui-home.png)
+![](_screenshots/ui-home.png)
 
 #### User Creation Modal
-![](_screenshots/module-zero-core-template-ui-user-create-modal.png)
+![](_screenshots/ui-user-create-modal.png)
 
 #### Login Page
 
-![](_screenshots/module-zero-core-template-ui-login.png)
+![](_screenshots/ui-login.png)
 
 # Documentation
 
